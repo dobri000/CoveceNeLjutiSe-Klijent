@@ -1,6 +1,7 @@
 package com.igrica.coveceneljutiseklijent.kontrolori;
 
 import com.igrica.coveceneljutiseklijent.ServerskaNit;
+import com.igrica.coveceneljutiseklijent.lib.AlertBox;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -21,20 +22,20 @@ public class PocetnaKontroler {
     public void pridruziSeSobi(){
         String text = sifraSobe.getText();
         if(validnostSifre(text) == false){
+            AlertBox.display("Los unos", "Neuspesno ste uneli sifru");
             sifraSobe.setText(null);
-            //TODO: ALERT BOX ZA OBAVESTENJE O LOSEM UNOSENJU SIFRE
         } else{
-            ServerskaNit.pridruziSeSobi(text);
+            ServerskaNit.pridruziSeSobi(Integer.parseInt(text));
         }
     }
 
     private boolean validnostSifre(String text){
         try{
             int sifra = Integer.parseInt(text);
-            if(sifra < 1000 || sifra > 9999)
+            if(sifra < 0 || sifra > 9999)
                 return false;
             return true;
-        } catch (Exception e){
+        } catch (NumberFormatException e){
             return false;
         }
     }

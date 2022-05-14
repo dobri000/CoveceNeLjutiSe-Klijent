@@ -1,0 +1,16 @@
+Pokretanje aplikacije
+Pokretanje thread-a za komunikaciju sa serverom
+Pokretanje GUI-a
+
+//Kreiranje sobe
+Slanje poruke "kreiraj sobu" - 1
+Primanje broja sobe
+TODO: pravljenje scene za cekanje igre
+
+//Pridruzivanje sobi
+Upisivanje sifre, validacija
+Prozor sa obavestenjem o gresci
+Slanje poruke "pridruzi se sobi" - 2
+Primanje bool da li je pridruzen sobi
+Ako nije AlertBox
+Ako jeste TODO: pravljenje scene za cekanje igre
