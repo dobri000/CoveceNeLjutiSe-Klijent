@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #352658;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.igrica.coveceneljutiseklijent.kontrolori.PocetnaKontroler">
+   <children>
+      <Button mnemonicParsing="false" onAction="#kreirajSobu" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: yellow; -fx-border-color: #e13131; -fx-border-width: 3;" text="KREIRAJ NOVU SOBU" textFill="#e13131">
+         <font>
+            <Font name="Franklin Gothic Medium" size="14.0" />
+         </font>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#pridruziSeSobi" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: yellow; -fx-border-color: #e13131; -fx-border-width: 3;" text="PRIDRUZI SE SOBI" textFill="#e13131">
+         <font>
+            <Font name="Franklin Gothic Medium" size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </Button>
+      <TextField fx:id="sifraSobe" alignment="CENTER" maxWidth="-Infinity" prefHeight="30.0" prefWidth="170.0" promptText="UNESITE 4 CIFRE">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </TextField>
+   </children>
+</VBox>
