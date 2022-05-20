@@ -9,12 +9,17 @@ import java.io.IOException;
 
 public class Igra extends Application {
 
+    public static Stage stage;
+    static Scene scenePocetna, sceneSoba;
+
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Igra.class.getResource("scene/pocetna.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        this.stage = stage;
+        FXMLLoader fxmlLoader1 = new FXMLLoader(Igra.class.getResource("scene/pocetna.fxml"));
+        Scene scenePocetna = new Scene(fxmlLoader1.load(), 320, 240);
         stage.setTitle("Covece ne ljuti se");
-        stage.setScene(scene);
+        stage.setScene(scenePocetna);
+        stage.setResizable(false);
         stage.show();
     }
 
@@ -25,4 +30,6 @@ public class Igra extends Application {
         //POKRETANJE GUI-A
         launch();
     }
+
+
 }
